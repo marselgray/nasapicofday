@@ -1,0 +1,43 @@
+*, 
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+*:focus{
+	outline: none;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	box-sizing: border-box;
+	padding: 2rem;
+
+	margin: 0 auto;
+	max-width: 100rem;
+}
+
+img{
+	width: 100%;
+}
+
+h1{
+	font-size: 3rem;;
+}
+
+p{
+	font-size: 1.8rem;
+}
+
+.center{
+	text-align: center;
+}
+
+.space{
+	margin: 2rem 0;
+}
