@@ -4,7 +4,7 @@ const url = 'https://api.nasa.gov/planetary/apod?api_key=ZYvidubAwlzYOV5HLowtSrb
 fetch(url)
 	.then(res => res.json())
 	.then(data => nasa = data)
-	.then(() => console.log(nasa))
+	// .then(() => console.log(nasa))
 
 
 setTimeout(function(){
@@ -31,7 +31,7 @@ setTimeout(function(){
 setTimeout(function(){
 	document.getElementById('loader').style.display = 'none';
 	document.getElementById('reveal').style.display = 'block';
-
+	document.getElementById('container').style.height = '100%';
 }, 1500)
 
 
