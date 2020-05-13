@@ -41,3 +41,23 @@ p{
 .space{
 	margin: 2rem 0;
 }
+
+#reveal{
+	display: none;
+}
+
+.container{
+	position: relative;
+	height: 100vh;
+}
+
+#loader{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#loader rect{
+	fill: #0B3D91;
+}

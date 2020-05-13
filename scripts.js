@@ -8,7 +8,6 @@ fetch(url)
 
 
 setTimeout(function(){
-
 	const title = nasa.title;
 	const copyright = nasa.copyright;
 
@@ -26,8 +25,14 @@ setTimeout(function(){
 		document.getElementById('author').style.opacity = '0';
 	}
 
-
 }, 1000)
+
+
+setTimeout(function(){
+	document.getElementById('loader').style.display = 'none';
+	document.getElementById('reveal').style.display = 'block';
+
+}, 1500)
 
 
 function formatDate (input) {
