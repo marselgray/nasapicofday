@@ -4,12 +4,13 @@ const url = 'https://api.nasa.gov/planetary/apod?api_key=ZYvidubAwlzYOV5HLowtSrb
 fetch(url)
 	.then(res => res.json())
 	.then(data => nasa = data)
-	// .then(() => console.log(nasa))
+	.then(() => console.log(nasa))
 
 
 setTimeout(function(){
 
 	const title = nasa.title;
+	const copyright = nasa.copyright;
 
 	document.getElementById('date').innerText = formatDate(nasa.date);
 	document.getElementById('title').innerText = title;
@@ -18,7 +19,13 @@ setTimeout(function(){
 	document.getElementById('image').setAttribute('alt', title);
 
 	document.getElementById('description').innerText = nasa.explanation;
-	document.getElementById('author').innerText = `Credit: ${nasa.copyright}`;
+
+	if (copyright){
+		document.getElementById('author').innerText = `Credit: ${copyright}`;
+	} else {
+		document.getElementById('author').style.opacity = '0';
+	}
+
 
 }, 1000)
 
