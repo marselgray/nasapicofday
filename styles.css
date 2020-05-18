@@ -20,6 +20,9 @@ body{
 
 img{
 	width: 100%;
+	max-width: 50rem;
+	display: block;
+	margin: 0 auto;
 }
 
 h1{
