@@ -8,7 +8,7 @@ fetch(url)
 
 
 setTimeout(function(){
-	document.getElementById('date').innerText = formatDate(nasa.date);
+	document.getElementById('date').innerText = `NASA's Astronomy Picture of the Day for ${formatDate(nasa.date)}`;
 
 	if (nasa.media_type == 'image'){
 		document.getElementById('media').innerHTML = `
@@ -22,7 +22,13 @@ setTimeout(function(){
 		`;
 	}
 
-	document.getElementById('description').innerText = nasa.explanation;
+	if (nasa.title){
+		document.getElementById('title').innerText = nasa.title;
+	}
+
+	if (nasa.explanation){
+		document.getElementById('description').innerText = nasa.explanation;
+	}
 
 	if (nasa.copyright){
 		document.getElementById('author').innerText = `Credit: ${nasa.copyright}`;
